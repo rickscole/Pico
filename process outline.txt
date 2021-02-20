@@ -1,0 +1,23 @@
+PURPOSE:
+broad outline of sentiment analysis ratings process
+
+NOTES:
+202102201218
+As of right now, all of the steps are in the same Python script.
+We'll look to modularize it / break it up into different scripts at some point.
+
+
+1. delete from staging tables
+    - [Abyss].[dbo].[SP_DeleteStagingTables_SentimentAnalysis]
+2. insert registry into sentiment analysis iteration tables
+    - [Abyss].[dbo].[SP_InsertInto_SentimentAnalysis_Iteration]
+3. get sentiment ratings
+    - Python script 
+    - 202102201218
+4. upload ratings to db
+    - upload sentiments.dtsx
+5. move upload from stg table to history table
+    - [Abyss].[dbo].[SP_InsertInto_SentimentAnalysis]
+6. recombine with other data
+    - VW_SentimentRatings
+7. display in Power BI
