@@ -1,0 +1,17 @@
+The purpose of this project is to extract sentiments from raw user inputs from www.theabyss.site
+
+FILE GUIDE:
+process outline.txt - breaks down the general process in a stepwise fashion, providing references to corresponding objects and scripts
+process outline.jpeg - visual representation of the process
+upload sentiments.dtsx - SSIS package utility that transports data from csv to staging table in DB
+TSQL FOLDER - scripts written in TSQL in Microsoft SQL Server Environment
+    SP FOLDER - scripts for stored procedures
+        SP_DeleteStagingTables_SentimentAnalysis.sql - script that deletes staging tables
+        SP_InsertInto_SentimentAnalysis.sql - move data from staging table to history table for sentiment analysis scores
+        SP_InsertInto_SentimentAnalysis_Iteration.sql - insert registry into Sentiment Analysis Iteration
+    TBL FOLDER - scripts for tables
+        STG TBL_SentimentAnalysis.sql - create table
+        TBL_SentimentAnalysis.sql - create table
+        TBL_SentimentAnalysis_Iteration.sql -  create table
+    VW FOLDER - scripts for views
+        VW_SentimentRatings.sql - create view
