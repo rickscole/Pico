@@ -14,7 +14,7 @@ import os
 start_time = time.time()
 
 ## connect to db
-connection = pyodbc.connect('Driver={SQL Server};''Server=abyss.database.windows.net;''Database=Abyss;''UID=rickcole;''PWD=Integer0neg!;');
+connection = pyodbc.connect('Driver={SQL Server};''Server=abyss.database.windows.net;''Database=Abyss;''UID=rickcole;''PWD=TURNMUSICOFF;');
 cursor = connection.cursor()
 
 ## delete from staging tables
