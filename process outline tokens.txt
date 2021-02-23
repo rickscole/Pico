@@ -1,0 +1,24 @@
+PURPOSE:
+broad outline of tokenization process
+
+NOTES:
+
+NOTES:
+202102231318
+As of right now, all of the steps are in the same Python script.
+We'll look to modularize it / break it up into different scripts at some point.
+
+
+1. delete from staging tables
+    - [Abyss].[dbo].[SP_DeleteStagingTables_Tokens]
+2. insert registry into tokenization iteration table
+    - [Abyss].[dbo].[SP_InsertInto_Tokens_Iteration]
+3. get tokens
+    - Python script 
+    - 202102231318
+4. upload ratings to db
+    - upload tokens.dtsx
+5. move upload from stg table to history table
+    - [Abyss].[dbo].[SP_InsertInto_Tokens]
+6. display in Power BI
+    - [Abyss].[dbo].[VW_Tokens]
