@@ -1,0 +1,17 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [krn].[recap](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[ts] [datetime2](7) NULL,
+	[start_date] [datetime2](7) NULL,
+	[end_date] [datetime2](7) NULL,
+	[value] [nvarchar](4000) NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [krn].[recap] ADD PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
